@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F7F8" />
+  <title>選擇條件｜Love Budget</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="choose">
+  <main class="app-shell with-bottom">
+    <header class="ios-nav">
+      <a href="index.html" class="back-link">首頁</a>
+      <span class="nav-title">選擇條件</span>
+      <button id="clearChooseBtn" class="nav-button" type="button">清空</button>
+    </header>
+
+    <section class="progress-block">
+      <div class="progress-label">
+        <span>Step 1 of 3</span>
+        <strong id="chooseCountText">已選 0 項</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: 33%"></div>
+      </div>
+    </section>
+
+    <section class="page-intro">
+      <h1>先挑出你重視的條件</h1>
+      <p>
+        不需要每個都評分。先把你真的在意的項目選起來，下一步再分配 500 元。
+      </p>
+    </section>
+
+    <section class="search-card">
+      <input id="searchInput" type="search" placeholder="搜尋條件，例如：情緒、金錢、陪伴" />
+    </section>
+
+    <section class="filter-row" id="filterRow"></section>
+
+    <section id="chosenPreview" class="chosen-preview hidden"></section>
+
+    <section id="optionList" class="option-list"></section>
+
+    <section class="bottom-bar">
+      <div>
+        <span>目前選擇</span>
+        <strong id="bottomChooseCount">0 項</strong>
+      </div>
+      <button id="toBudgetBtn" class="bottom-primary" type="button">下一步</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
