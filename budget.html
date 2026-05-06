@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F7F8" />
+  <title>分配預算｜Love Budget</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="budget">
+  <main class="app-shell">
+    <header class="ios-nav">
+      <a href="choose.html" class="back-link">上一步</a>
+      <span class="nav-title">分配預算</span>
+      <button id="clearBudgetBtn" class="nav-button" type="button">清空</button>
+    </header>
+
+    <section class="progress-block">
+      <div class="progress-label">
+        <span>Step 2 of 3</span>
+        <strong id="budgetStatusText">0 / 500</strong>
+      </div>
+      <div class="progress-track">
+        <div id="budgetProgressFill" class="progress-fill" style="width: 0%"></div>
+      </div>
+    </section>
+
+    <section class="page-intro">
+      <h1>分配你的 500 元</h1>
+      <p>
+        只會顯示你剛才選到的條件。可以用加減按鈕微調，也可以使用平均分配。
+      </p>
+    </section>
+
+    <section class="budget-summary">
+      <div>
+        <span>已使用</span>
+        <strong id="usedBudget">0</strong>
+      </div>
+      <div>
+        <span>剩餘</span>
+        <strong id="leftBudget">500</strong>
+      </div>
+      <div>
+        <span>條件數</span>
+        <strong id="selectedTotal">0</strong>
+      </div>
+    </section>
+
+    <section id="budgetHint" class="ios-alert hidden"></section>
+
+    <section class="quick-panel">
+      <button id="equalBudgetBtn" type="button">平均分配</button>
+      <button id="zeroBudgetBtn" type="button">全部歸零</button>
+    </section>
+
+    <section id="currentTopPanel" class="current-top hidden"></section>
+
+    <section id="budgetList" class="budget-list"></section>
+
+    <section class="action-stack">
+      <button id="toResultBtn" class="primary-action" type="button">查看結果</button>
+      <a class="secondary-action" href="choose.html">重新選條件</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
