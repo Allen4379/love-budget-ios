@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F7F8" />
+  <title>結果｜Love Budget</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body data-page="result">
+  <main class="app-shell">
+    <header class="ios-nav">
+      <a href="budget.html" class="back-link">調整</a>
+      <span class="nav-title">結果</span>
+      <button id="restartBtn" class="nav-button" type="button">重測</button>
+    </header>
+
+    <section class="progress-block">
+      <div class="progress-label">
+        <span>Step 3 of 3</span>
+        <strong>完成</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: 100%"></div>
+      </div>
+    </section>
+
+    <section class="result-hero">
+      <p class="result-kicker">你的分數摘要</p>
+      <h1>我的愛情條件分數</h1>
+      <p id="resultIntro"></p>
+    </section>
+
+    <section class="metric-grid">
+      <div class="metric-card">
+        <span>使用預算</span>
+        <strong id="resultUsed">0 / 500</strong>
+      </div>
+
+      <div class="metric-card">
+        <span>最高面向</span>
+        <strong id="resultTopDimension">尚未分配</strong>
+      </div>
+
+      <div class="metric-card">
+        <span>已選條件</span>
+        <strong id="resultSelectedCount">0 項</strong>
+      </div>
+
+      <div class="metric-card">
+        <span>前三項佔比</span>
+        <strong id="resultTopRatio">0%</strong>
+      </div>
+    </section>
+
+    <details class="detail-card" open>
+      <summary>面向分數</summary>
+      <div id="dimensionScores" class="score-list"></div>
+    </details>
+
+    <details class="detail-card" open>
+      <summary>投入最高條件</summary>
+      <ol id="topItems" class="rank-list"></ol>
+    </details>
+
+    <details class="detail-card">
+      <summary>分數報告</summary>
+      <p id="scoreReport" class="report-copy"></p>
+    </details>
+
+    <section class="share-card">
+      <h2>分享結果</h2>
+      <p>你可以分享結果連結，或儲存一張適合 IG 限動的分數圖。</p>
+
+      <div class="share-actions">
+        <button id="shareLinkBtn" class="primary-action" type="button">分享結果連結</button>
+        <button id="downloadImageBtn" class="secondary-action" type="button">儲存限動圖</button>
+        <button id="copyTextBtn" class="secondary-action" type="button">複製文字結果</button>
+      </div>
+    </section>
+
+    <section class="action-stack">
+      <a class="secondary-action" href="budget.html">回去調整預算</a>
+      <a class="secondary-action" href="choose.html">重新選條件</a>
+    </section>
+
+    <section class="capture-area" aria-hidden="true">
+      <article id="storyCard" class="story-card">
+        <div class="story-header">
+          <span>LOVE BUDGET</span>
+          <span>500 TEST</span>
+        </div>
+
+        <h2>我的愛情條件分數</h2>
+
+        <div class="story-metrics">
+          <div>
+            <span>使用預算</span>
+            <strong id="storyUsed">0 / 500</strong>
+          </div>
+          <div>
+            <span>最高面向</span>
+            <strong id="storyTopDimension">尚未分配</strong>
+          </div>
+        </div>
+
+        <div id="storyScores" class="story-score-list"></div>
+
+        <div class="story-top-items">
+          <p>投入最高條件</p>
+          <ol id="storyTopItems"></ol>
+        </div>
+
+        <p class="story-footer">用 500 元，看見你的愛情排序。</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
